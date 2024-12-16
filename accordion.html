@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <ul>
+                <li>
+                    <p>
+                        <span>+</span>Item 1
+                    </p>
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ipsa omnis sunt minima soluta
+                        saepe. Maiores repellat, ipsam odio voluptatem neque in nostrum sit labore inventore nemo
+                        expedita distinctio minus.
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <span>+</span>Item 2
+                    </p>
+                    <div>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptas odio similique
+                        cum exercitationem earum perferendis dolorem. Architecto, eveniet quidem. Architecto repellendus
+                        nesciunt consectetur quos quo odio tenetur nobis ea.
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <span>+</span>Item 2
+                    </p>
+                    <div>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis incidunt deleniti, suscipit
+                        rem dicta laboriosam ipsum soluta velit, provident rerum modi cupiditate distinctio nisi
+                        consectetur porro. Quis atque id rerum.
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <style>
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        section ul li p {
+            font-weight: bold;
+            font-size: 2rem;
+            padding: 3vw;
+            margin: 0 0 0 2vw;
+        }
+
+        section ul li div {
+            margin: 0 0 0 5vw;
+            width: 30%;
+            font-size: 1.5rem;
+        }
+
+        ul li div {
+            display: none;
+        }
+    </style>
+    <script>
+        let elements = document.querySelectorAll('p');
+        elements.forEach((item) => {
+            item.addEventListener('click', function (e) {
+                console.log("la ele");
+                let estado = this.parentNode.querySelector("div").style.display;
+                if (estado == "block") {
+                    this.parentNode.querySelector("div").style.display = "none";
+                    this.querySelector("span").innerHTML = "+"
+                } else {
+                    this.parentNode.querySelector("div").style.display = "block";
+                    this.querySelector("span").innerHTML = "-"
+                }
+
+            })
+
+        });
+    </script>
+</body>
+
+</html>
